@@ -1,0 +1,69 @@
+.box {
+    border: #ddd 1px solid;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: white;
+}
+
+
+/* a {
+    color: blue;
+    text-decoration: underline;
+} */
+
+.reaction {
+    display: flex;
+}
+
+.reaction div {
+    margin-right: 20px;
+}
+
+.logo {
+    width: 40px;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-left: -20px;
+}
+
+.left-column {
+    border-right: 1px solid #ddd;
+}
+
+.right-column {
+    border-left: 1px solid #ddd;
+}
+
+.middle-column {
+    padding: 50px;
+    background-color: rgb(244, 246, 248);
+    border-bottom: 1px solid #ddd;
+}
+
+textarea {
+    width: 570px;
+    height: 80px;
+    border: #ddd 1px solid;
+}
+
+.post-area {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin: 30px 0 10px;
+}
+
+#remain {
+    height: 20px;
+    font-size: 12px;
+}
+
+#reTweetArea .box {
+    background-color: rgb(247, 252, 255);
+}
+
+.buttonPlace {
+    margin: 50px auto;
+    margin-left: -30px;
+}
