@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <title>Twitter</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2 col-xs-12 left-column">
+                <img src="https://upload.wikimedia.org/wikipedia/vi/9/9f/Twitter_bird_logo_2012.svg" class="logo">
+                <div class="buttonPlace"><button class="btn btn-primary" onclick="showOriginalList()" id="returnButton">Back</button></div>
+            </div>
+            <div class="col-md-8 middle-column ">
+                <h1 class="text-center">The Simplified Twitter</h1>
+                <div class="post-area">
+                    <textarea type="text" id="tweetArea"></textarea>
+                    <button class="btn btn-primary" onclick="addTweet()">Tweet</button>
+
+
+                </div>
+                <p id="remain"></p>
+                <div id="resultArea">
+                    <div id="original-list"></div>
+                </div>
+            </div>
+            <div class="col-md-2 right-column"></div>
+        </div>
+    </div>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
