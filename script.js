@@ -7,6 +7,7 @@ let num = 0;
 document.getElementById("returnButton").style.display = "none";
 
 
+
 function getFilteredList(hashTag) {
     console.log(hashTag)
     showTweet(itemList.filter(item => {
@@ -41,9 +42,11 @@ const countLetter = () => {
     if (remain < 0) {
         document.getElementById("remain").innerHTML = `${remain} characters left`
         document.getElementById("remain").style.color = 'red'
+        document.getElementById("postButton").disabled = true
     } else {
         document.getElementById("remain").innerHTML = `${remain} characters left`
         document.getElementById("remain").style.color = 'black'
+        document.getElementById("postButton").disabled = false
     }
 
 }
@@ -88,7 +91,10 @@ function formatTweet(item) {
     return text;
 }
 
+
 let showTweet = (list) => {
+
+
     console.log("list ", list);
     lengthOfSentence = tweetArea.value.length;
     //    if (tweetArea.value.length == 0) {
@@ -101,8 +107,9 @@ let showTweet = (list) => {
 
         var resultHTML = `
         <div class="box">
-            ${formatTweet(item)}
+            <p>${formatTweet(item)}</p>
             <div class="reaction">`
+
         if (!item.isLike) {
             resultHTML += `<div id="like" onclick="toggleLike(${id})"><a href="#0">Like</a></div>`
         } else {
@@ -111,6 +118,8 @@ let showTweet = (list) => {
 
         resultHTML +=
             `<div id="delete" onclick="remove(${id})"><a href="#0">Delete</a></div>`
+
+
         if (!item.isReTweet) {
             resultHTML += `<div id="retweet" onclick="reTweet(${item.id})"><a href="#0">Retweet</a></div>`
         }
@@ -119,16 +128,19 @@ let showTweet = (list) => {
 
         if (item.isReTweet) {
             resultHTML += `<div id="reTweetArea">
-                                <div class="box">${
-                                    formatTweet(itemList.filter(one => one.id == item.parents)[0])}
+                                <div class="box"><p>${
+                                    formatTweet(itemList.filter(one => one.id == item.parents)[0])}</p>
                                 </div>
                             </div>`
 
         }
-        resultHTML += ` </div>`
+        // resultHTML += ` <div class="postAt">
+        //                     <p id="date">${moment(Date()).format('llll')}</p>
+        //                 </div>
+        //             </div>`
+        resultHTML += `</div>`
         return resultHTML;
     }).join("")
-
 
     console.log(itemList)
 
@@ -155,7 +167,6 @@ function toggleLike(id) {
 //can't do retweet of a retweet
 
 let reTweet = (id) => {
-    //document.getElementById("remain").innerHTML = "";
 
     let reTweetText = prompt("Content of retweet:");
 
@@ -171,11 +182,15 @@ let reTweet = (id) => {
             parents: original.id
         }
 
-
         itemList.unshift(retweetObj)
         showTweet(itemList)
         num++
-        //document.getElementById("tweetArea").value = '';
-
     }
 }
+
+//Additional features:
+/* 
+1. Date
+2. User posts
+3. Style alert box
+ */

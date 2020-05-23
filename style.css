@@ -1,9 +1,10 @@
 .box {
-    border: #ddd 1px solid;
+    border: #007bff 1px solid;
     margin-top: 20px;
     margin-bottom: 20px;
     padding: 20px;
     background-color: white;
+    word-wrap: break-word;
 }
 
 
@@ -56,6 +57,14 @@ textarea {
 
 #remain {
     height: 20px;
+    font-size: 12px;
+}
+
+.postAt {
+    margin-top: 10px;
+}
+
+#date {
     font-size: 12px;
 }
 
