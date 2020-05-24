@@ -1,3 +1,49 @@
+/* .navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+} */
+
+.iconLine {
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+}
+
+.iconList {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.iconList i {
+    margin-left: -40px;
+    margin-right: 10px;
+    color: lightskyblue;
+    padding: 5px 0;
+    transition: 0.5s;
+}
+
+.iconList i:hover {
+    transition: 0.5s;
+    color: var(--blue);
+}
+
+.iconLine a {
+    color: lightskyblue;
+    transition: .5s;
+}
+
+.iconLine a:hover {
+    text-decoration: none !important;
+    color: var(--blue);
+    transition: .5s;
+}
+
 .box {
     border: #007bff 1px solid;
     margin-top: 20px;
@@ -18,7 +64,7 @@
 .logo {
     width: 40px;
     margin: 0 auto;
-    margin-top: 50px;
+    margin-top: 30px;
     margin-left: -20px;
 }
 
@@ -31,7 +77,7 @@
 }
 
 .middle-column {
-    padding: 50px;
+    padding: 30px;
     background-color: rgb(244, 246, 248);
     border-bottom: 1px solid #ddd;
     background-image: url(https://upload.wikimedia.org/wikipedia/vi/9/9f/Twitter_bird_logo_2012.svg);
@@ -41,7 +87,7 @@
 }
 
 textarea {
-    width: 570px;
+    width: 600px;
     height: 80px;
     border: #ddd 1px solid;
     padding: 10px;
@@ -78,4 +124,35 @@ textarea::placeholder {
 .buttonPlace {
     margin: 50px auto;
     margin-left: -30px;
+}
+
+#logInName {
+    margin-left: auto;
+}
+
+@media screen and (max-width: 770px) {
+    .logo {
+        margin: 20px 20px 0px;
+    }
+    #returnButton {
+        margin-left: 50px;
+    }
+    .left-column {
+        border-right: 0px;
+    }
+    .middle-column {
+        border: 1px solid #ddd;
+    }
+    textArea {
+        width: 300px;
+        mix-blend-mode: multiply;
+    }
+    .iconList {
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+    }
+    .iconList i {
+        margin-left: 25px;
+    }
 }

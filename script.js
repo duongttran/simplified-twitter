@@ -6,6 +6,21 @@ let num = 0;
 
 document.getElementById("returnButton").style.display = "none";
 
+// let logIn = () => {
+//     name = prompt("Please enter your name");
+//     if (name == null || name.length == 0) {
+//         name = prompt("Please enter a valid name")
+//         document.getElementById("logInName").innerHTML = `Hello ${name}!`;
+//     } else {
+//         document.getElementById("logInName").innerHTML = `Hello ${name}!`;
+//         document.getElementById("signOut").style.display = "block";
+//         document.getElementById("signIn").style.display = "none";
+//         let logOut = () => {
+//             document.getElementById("signIn").style.display = "block";
+//             document.getElementById("signOut").style.display = "none"
+//         }
+//     }
+// }
 
 function getFilteredList(hashTag) {
     console.log(hashTag)
@@ -88,6 +103,19 @@ function formatTweet(item) {
     }
     return text;
 }
+
+// function formatUser(item) {
+//     var words = item.contents.split(" ")
+//     var text = ""
+//     for (i = 0; i < words.length; i++) {
+//         if (words[i][0] == "@") {
+//             text += ` <a href="#0">${words[i]}</a>`
+//         } else {
+//             text += ` ${words[i]}`
+//         }
+//     }
+//     return text;
+// }
 
 
 let showTweet = (list) => {
@@ -206,6 +234,9 @@ let reTweet = (id) => {
 //Additional features:
 /* 
 1. Date
-2. User posts
+2. User posts with @
 3. Style alert box
+4. Sign in & sign out
+5. Heart animation
+6. Save and remove local storage
  */
