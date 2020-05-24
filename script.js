@@ -7,7 +7,6 @@ let num = 0;
 document.getElementById("returnButton").style.display = "none";
 
 
-
 function getFilteredList(hashTag) {
     console.log(hashTag)
     showTweet(itemList.filter(item => {
@@ -68,7 +67,6 @@ let addTweet = () => {
             isLike: false,
             isReTweet: false,
             parents: null
-                //comments:[]
         }
         itemList.unshift(newTweet)
         num++;
@@ -116,6 +114,12 @@ let showTweet = (list) => {
             resultHTML += `<div id="like" onclick="toggleLike(${id})"><a href="#0">Unlike</a></div>`
         }
 
+        // if (!item.isLike) {
+        //     resultHTML += `<div class="heart" id="heartIcon" onclick="toggleLike(${id})"></div>`
+        // } else {
+        //     resultHTML += `<div class="heart is-active" id="heartIcon" onclick="toggleLike(${id})"></div>`
+        // }
+
         resultHTML +=
             `<div id="delete" onclick="remove(${id})"><a href="#0">Delete</a></div>`
 
@@ -123,6 +127,7 @@ let showTweet = (list) => {
         if (!item.isReTweet) {
             resultHTML += `<div id="retweet" onclick="reTweet(${item.id})"><a href="#0">Retweet</a></div>`
         }
+
 
         resultHTML += `</div>`
 
@@ -144,6 +149,23 @@ let showTweet = (list) => {
 
     console.log(itemList)
 
+    // let mainHeart = document.getElementsByClassName("heart")[0];
+    // mainHeart.addEventListener("click", heartAni)
+
+    // function heartAni() {
+    //     console.log("hey")
+    //     mainHeart.classList.toggle("is-active");
+    // }
+}
+
+
+tweetArea.addEventListener("input", countLetter)
+
+function toggleLike(id) {
+    itemList[id].isLike = !itemList[id].isLike;
+    //console.log("heart ani")
+    //document.getElementsByClassName("heart")[0].classList.toggle("is-active")
+    showTweet(itemList);
 }
 
 function remove(id) {
@@ -156,13 +178,6 @@ function remove(id) {
     console.log(itemList)
 }
 
-
-tweetArea.addEventListener("input", countLetter)
-
-function toggleLike(id) {
-    itemList[id].isLike = !itemList[id].isLike;
-    showTweet(itemList);
-}
 
 //can't do retweet of a retweet
 
