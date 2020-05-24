@@ -1,12 +1,3 @@
-/* .navigation {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #ddd;
-    margin-bottom: 30px;
-    padding-bottom: 20px;
-} */
-
 .iconLine {
     margin: 5px 0;
     display: flex;
@@ -44,8 +35,18 @@
     transition: .5s;
 }
 
+
+/* .navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+} */
+
 .box {
-    border: #007bff 1px solid;
+    border: #38A1F3 1px solid;
     margin-top: 20px;
     margin-bottom: 20px;
     padding: 20px;
@@ -84,6 +85,7 @@
     background-repeat: no-repeat;
     background-position: bottom right;
     /* background-position-y: 110%; */
+    border-top: 4px solid #38A1F3;
 }
 
 textarea {
@@ -132,8 +134,15 @@ textarea::placeholder {
 
 .to-follow {
     margin-top: 100px;
-    color: lightskyblue;
     margin-left: 30px;
+}
+
+.profile {
+    color: lightskyblue;
+}
+
+h5 {
+    color: #38A1F3;
 }
 
 h6 {
@@ -193,6 +202,7 @@ footer {
     }
     .middle-column {
         border: 1px solid #ddd;
+        border-top: 4px solid #38A1F3;
     }
     .right-column {
         border-left: 0px;
@@ -204,7 +214,7 @@ footer {
     .iconList {
         flex-direction: row;
         flex-wrap: wrap;
-        margin-bottom: 20px;
+        margin-bottom: 50px;
     }
     .iconList i {
         margin-left: 25px;
