@@ -118,7 +118,7 @@ textarea::placeholder {
 }
 
 #reTweetArea .box {
-    background-color: rgb(247, 252, 255);
+    background-color: rgb(235, 242, 247);
 }
 
 .buttonPlace {
@@ -130,7 +130,58 @@ textarea::placeholder {
     margin-left: auto;
 }
 
-@media screen and (max-width: 770px) {
+.to-follow {
+    margin-top: 100px;
+    color: lightskyblue;
+    margin-left: 30px;
+}
+
+h6 {
+    line-height: 15px;
+    margin-bottom: 0px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+}
+
+.user-info {
+    padding-top: 20px;
+}
+
+.profile-img {
+    width: 50px;
+    height: 100%;
+    border-radius: 100%;
+    /* margin-left: 30px; */
+    margin-right: 10px;
+    display: block;
+    background-color: grey;
+}
+
+.profile-img img {
+    width: 50px;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 100%;
+}
+
+footer {
+    margin: 50px auto;
+    color: #555;
+}
+
+
+/* 
+.to-follow,
+.left-column,
+.right-column {
+    background: lightgrey;
+} */
+
+@media (max-width: 770px) {
     .logo {
         margin: 20px 20px 0px;
     }
@@ -143,6 +194,9 @@ textarea::placeholder {
     .middle-column {
         border: 1px solid #ddd;
     }
+    .right-column {
+        border-left: 0px;
+    }
     textArea {
         width: 300px;
         mix-blend-mode: multiply;
@@ -154,5 +208,9 @@ textarea::placeholder {
     }
     .iconList i {
         margin-left: 25px;
+    }
+    .to-follow {
+        margin-top: 50px;
+        margin-left: 30px;
     }
 }
